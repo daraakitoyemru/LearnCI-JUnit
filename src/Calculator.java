@@ -15,7 +15,10 @@ public class Calculator {
 		double result = 0;
 		if (a<b) {
 			result = a * b;
-		}else {
+		} else if (b == 0){
+			throw new ArithmeticException("Cannot divide by zero");
+		}
+		else {
 			result = a/b;
 		}
 		return result;
